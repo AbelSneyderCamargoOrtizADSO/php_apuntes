@@ -28,6 +28,23 @@ var_dump($persona1);
 // var_dump($persona2);
 
 
+require_once("namespace1/persona.php");
+require_once("namespace2/persona.php");
+
+use namespace1\Persona; // SE USA PARA LLAMAR AL NAMEESPACE Y DECLARAR LA CLASE SOLO CON EL NOMBRE DE LA CLASE
+use namespace2\Persona as Persona2; // SE USA PARA LLAMAR AL NAMEESPACE
+
+$humano1 = new Persona;
+$humano2 = new Persona2;
+
+// $humano1 = new namespace2\Persona;
+
+echo "<br>";
+$humano1 -> saludar();
+echo "<br>";
+$humano2 -> saludar();
+
+
 ?>
 
 
